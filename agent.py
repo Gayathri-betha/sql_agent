@@ -15,7 +15,7 @@ st.title("SQL Agent")
 
 # Enter your OpenAI API private access key here. IMPORTANT - don't share your code online if it contains your access key or anyone will be able to access your openai account
 if api_key := st.text_input("Enter the API Key "):
-  os.environ['OPENAI_API_KEY'] = api_key
+  os.environ['OPENAI_API_KEY'] =api_key
   load_dotenv()
 # define the database we want to use for our test
 db = SQLDatabase.from_uri('sqlite:///sql_lite_database.db')
