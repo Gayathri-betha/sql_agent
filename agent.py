@@ -10,7 +10,6 @@ from langchain_openai import OpenAI
 from langchain.agents import create_sql_agent
 from dotenv import load_dotenv
 
-
 st.title("SQL Agent")
 
 # Enter your OpenAI API private access key here. IMPORTANT - don't share your code online if it contains your access key or anyone will be able to access your openai account
@@ -52,5 +51,3 @@ if prompt := st.chat_input("What is up?"):
         response=str(agent_executor.invoke(prompt)["output"])
         st.write(response)
     st.session_state.messages.append({"role": "assistant", "content": response})
-
-
